@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotary Wisdom - Home</title>
+    <link rel="stylesheet" type="text/css" href="rotary.css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+    <!--Navigation bar-->
+  <nav>
+    <div class="sandwich-icon-area" onclick="openNav()">
+        <p>&#9776;</p> <!-- Sandwich icon -->
+    </div>
+    <div class="nav-title">
+        <p>Rotary Wisdom</p> <!-- Nav title -->
+    </div>
+  </nav>
+
+    <!--The curtain dropdown menu-->
+    <div id="myNav" class="overlay">
+        <p class="close-icon" onclick="closeNav()"> &times; </p>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="roles.html">Helicopter Roles</a>
+            <a href="latestNews.html">Latest News</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <script>
+
+      const images = [
+        "./images/mi8_1.png",
+        "./images/mi8_2.jpeg", // Add your additional image paths here
+        "./images/ka50_1.jpg",
+        "./images/ka50_2.png",
+        "./images/ka52_1.png",
+        "./images/ka52_2.png",
+        "./images/mi28_1.png",
+        "./images/mi28_2.png",
+        "./images/mi24_1.png",
+        "./images/mi24_2.png",
+        "./images/mi26_1.jpg",
+        "./images/mi26_2.png",
+        "./images/russia.png",
+        "./images/soviet.png",
+        ];
+
+        let currentIndex = 0;
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+            document.getElementById("slideshow").src = images[currentIndex];
+        }
+        // Change image every 3 seconds (3000 milliseconds)
+        setInterval(showNextImage, 3000);
+        //When users click on "sandwich icon", open or show the curtain menu layer
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+        //Write the closeNav() method here
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
+
+    <!--main area-->
+    <main>
+        <div class="content-wrapper">
+            <div class="slideshow-section">
+                <img id="slideshow" src="./images/mi8_1.png" alt="Slideshow Image" width="300" height="250">
+            </div>
+            <div class="index-text">
+                <h1>Welcome to Rotary Wisdom</h1>
+                <p>
+                    Welcome to Rotary Wisdom, your premier destination for everything related to Soviet and Russian helicopters. Here, we celebrate the remarkable engineering and history of these incredible machines. From the iconic Mil Mi-8 to the agile Ka-50, our site offers in-depth insights, stunning visuals, and expert analysis. Whether you’re an aviation enthusiast, a history buff, or simply curious about these flying giants, we invite you to explore our rich content and join us in appreciating the artistry and innovation that define rotary-wing aviation.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!--Footer Area-->
+    <footer>
+        <p>©2024 Rotary Wisdom</p>
+    </footer>
+</body>
+</html>

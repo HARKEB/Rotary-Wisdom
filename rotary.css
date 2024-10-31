@@ -1,0 +1,555 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar styles */
+nav {
+    min-height: 10vh;
+    background-color: white; /* Set a dark color for the navbar */
+    color: white; /* Ensure text is visible */
+    height: 100px;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center vertically */
+    padding: 0 20px; /* Add some padding */
+}
+
+/* Sandwich icon styles */
+.sandwich-icon-area {
+    font-size: 2em;
+    cursor: pointer;
+    color: black;
+}
+
+.nav-title {
+    flex-grow: 1; /* Allow title to take up available space */
+    font-size: 5vw;
+    text-align: center; /* Center the title */
+    color: black;
+}
+/* Curtain menu styles */
+.overlay {
+    height: 100%;
+    width: 27%;
+    display: none; /* block: show; none: hide */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1; /* Make this layer sit on top of other layers */
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Ensure padding doesn't affect total width */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-start; /* Align items to the left */
+    justify-content: center; /* Center the content vertically */
+}
+
+/* Links styling */
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 5vw; /* Scale font size based on viewport width */
+    color: white;
+    display: block;
+}
+
+/* Optional: Centering the links visually */
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+}
+.close-icon {
+    position: absolute;
+    top: 1em;
+    right: 1.5em;
+    font-size: 8vw; /* Scale font size based on viewport width */
+    cursor: pointer;
+    color: white;
+}
+.overlay a:hover, .overlay a:focus {
+    color: green;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full height of the viewport */
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsive layout */
+    justify-content: space-around; /* Space items evenly */
+    padding: 20px;
+    background-color: blue;
+	  flex-direction: column;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: Blue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: Red;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}	
+
+.text-content {
+    max-width: 50%; /* Wider max-width to bring it closer to the center */
+    margin-left: 0; /* Remove additional margin to keep it aligned */
+    text-align: left; /* Optional: keeps text left-aligned */
+    padding-left: 10%;
+}
+
+.contact-main {
+    display: flex;
+    flex-direction: row; /* Align items in a row for larger screens */
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between; /* Space out the text and form */
+    padding: 20px;
+}
+
+.text-content {
+    max-width: 40%; /* Set a smaller width for text */
+}
+
+.container {
+    max-width: 50%; /* Set a smaller width for the form */
+    width: 100%; /* Allow it to be responsive */
+}
+
+.civilian-main {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 20px;
+}
+
+/* Centering index-text content */
+.civilian-main .index-text {
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Make it span the full width of the card */
+    margin-bottom: 20px; /* Optional spacing below the index text */
+    color: white; /* Set text color */
+}
+
+/* Centering card items */
+.civilian-main .card {
+    display: flex; /* Arrange image, title, and text in a row */
+    align-items: center; /* Center content vertically within the card */
+    width: 1200px; /* Set a max width for the card */
+    margin: 20px; /* Space between cards */
+    padding: 15px; /* Padding inside each card */
+    border: 3px solid black; /* Black border around each card */
+    background-color: white; /* Optional background for contrast */
+    color: black;
+}
+.performance-table {
+    width: 500px; /* Make the table full width */
+    border-collapse: collapse; /* Remove cell spacing */
+    border: 1px solid black; /* Add a border around the table */
+    margin-top: 10px; /* Add some space above the table */
+    margin-left: 10px;
+}
+
+.performance-table th, .performance-table td {
+    border: 1px solid black; /* Add borders to cells */
+    padding: 5px; /* Add padding to cells */
+    text-align: left; /* Align text to the left */
+}
+.card img {
+    width: 300px; /* Increase the image width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 1.5em;
+    padding-right: 30px; /* Add padding to the right of the title */
+}
+
+.card p {
+    margin: 0; /* Remove default margin */
+    font-size: 1em;
+    color: black;
+    max-width: 200px;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Closer spacing between image and text */
+}
+
+.slideshow-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.slideshow-section img {
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+    max-width: 100%;
+}
+
+.index-text {
+    flex: 1; /* Text section will take up 50% of available space */
+    text-align: left;
+    max-width: 60%;
+    color: white;
+}
+
+
+.index-text h1 {
+  font-size: 1.5em; /* Adjust font size for headings */
+  margin: 10px 0; /* Space above and below heading */
+}
+
+.index-text p {
+  font-size: 1em; /* Set font size for paragraphs */
+  line-height: 1.5; /* Increase line height for readability */
+  margin: 0 0 10px; /* Space below paragraphs */
+  padding: 0 10px; /* Add horizontal padding for better spacing */
+}
+
+.text-content p {
+  color: white;
+  font-size: 1em; /* Set font size for paragraphs */
+  line-height: 1.5; /* Increase line height for readability */
+  margin: 0 0 10px; /* Space below paragraphs */
+  padding: 0 10px; /* Add horizontal padding for better spacing */
+}
+
+.text-content h1 {
+  margin: 10px 0; /* Space above and below heading */
+  color: white;
+}
+
+
+.scrollable-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items horizontally */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    height: 100%; /* Make it take the full height of its parent */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.image-text-pair {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center items horizontally */
+    margin: 10px; /* Space between items */
+    width: calc(50% - 20px); /* Allow two items per row */
+    text-align: center; /* Center-align text */
+}
+.image-text-pair h1 {
+    font-size: 1.5em; /* Adjust font size for headings */
+    margin: 10px 0; /* Space above and below heading */
+}
+.image-text-pair p {
+    font-size: 1em; /* Set font size for paragraphs */
+    line-height: 1.5; /* Increase line height for readability */
+    margin: 0 0 10px; /* Space below paragraphs */
+    padding: 0 10px; /* Add horizontal padding for better spacing */
+}
+.image-text-pair a {
+    margin-top: 10px; /* Space above the link */
+    text-decoration: none; /* Remove underline */
+    color: blue; /* Change link color */
+}
+.image-text-pair a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.image-text-pair img {
+  width: 80%; /* Make images responsive to their container */
+  height: 200px; /* Set a fixed height for images */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+.box-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space boxes evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin: 20px 0; /* Add some space above and below */
+}
+
+.box {
+    background-color: white; /* Set background color for boxes */
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 8px; /* Round corners */
+    padding: 20px; /* Add padding inside the box */
+    text-align: center; /* Center text */
+    width: 30%; /* Set width of each box */
+    margin: 10px; /* Add some margin between boxes */
+}
+
+.box img {
+    width: 100%; /* Make images responsive to their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Round image corners */
+}
+.description {
+    margin: 10px 0; /* Add space above and below the description */
+    font-size: 0.9em; /* Smaller font size for description */
+    color: #666; /* Gray color for description */
+}
+
+.button {
+    display: inline-block; /* Make the button behave like a block */
+    padding: 10px 15px; /* Add padding */
+    background-color: blue; /* Set button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Round button corners */
+    margin-top: 10px; /* Space above the button */
+}
+
+.button:hover {
+    background-color: red; /* Darker color on hover */
+}
+
+/* Footer styles */
+footer {
+    height: 100px; /* Fixed height for footer */
+    display: flex; /* Center content inside footer */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: red; /* Change text color for visibility */
+}
+
+footer p {
+    font-size: 10px; /* Default font-size is 16px */
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+/* Small screens (up to 425px) */
+@media screen and (max-width: 425px) {
+    .overlay {
+        width: 40%;
+    }
+    .scrollable-container {
+        flex-direction: column;
+    }
+    .image-text-pair {
+        width: 100%;
+    }
+    iframe {
+    width: 100%;
+    height: 500px; /* Adjust height as needed for small screens */
+    }
+    .civilian-main .card {
+      flex-direction: column; /* Stack elements vertically */
+      width: 90%; /* Make the card width responsive */
+      align-items: center; /* Center align elements in the card */
+    }
+
+    .card img {
+        width: 100%; /* Full width image */
+        margin-right: 0; /* Remove side margin */
+    }
+
+    .performance-table {
+        width: 100%; /* Full width table */
+        margin-left: 0; /* Remove side margin */
+    }
+    .box-container {
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center; /* Center-align each box */
+    }
+
+    .box {
+        width: 90%; /* Make each box take up most of the screen width */
+        margin-bottom: 20px; /* Add some space between stacked boxes */
+    }
+	.contact-main {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+    .text-content,
+    .container {
+        max-width: 100%; /* Allow full width on small screens */
+        width: 90%; /* Responsive width */
+    }
+    .container {
+        margin-top: 20px; /* Add space between text and form */
+    }
+
+}
+
+/* Medium screens (426px to 768px) */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .image-text-pair {
+        width: 100%;
+    }
+    .index-text {
+        max-width: 80%;
+    }
+    .overlay {
+        width: 40%;
+    }
+    .civilian-main .card {
+      flex-direction: column; /* Stack elements vertically */
+      width: 90%; /* Make the card width responsive */
+      align-items: center; /* Center align elements in the card */
+    }
+
+    .card img {
+        width: 100%; /* Full width image */
+        margin-right: 0; /* Remove side margin */
+    }
+
+    .performance-table {
+        width: 100%; /* Full width table */
+        margin-left: 0; /* Remove side margin */
+    }
+	
+    .box-container {
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center; /* Center-align each box */
+    }
+
+    .box {
+        width: 90%; /* Make each box take up most of the screen width */
+        margin-bottom: 20px; /* Add some space between stacked boxes */
+    }
+
+    .text-content {
+        max-width: 100%; /* Expand text to full width */
+        text-align: center; /* Center-align text */
+        margin: 0 0 10px; /* Margin below text */
+    }
+
+    iframe {
+        width: 100%; /* Responsive full width for the form */
+        max-width: 100%; /* Prevent overflow */
+        height: 300px; /* Adjust height as needed */
+    }
+    .content-wrapper {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center-align both image and text */
+    text-align: center; /* Center-align text for smaller screens */
+    }
+
+    .index-text {
+        text-align: center; /* Center-align text */
+        max-width: 100%; /* Allow text to span full width */
+        margin-top: 15px; /* Add space between image and text */
+    }
+    .contact-main {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+    .text-content,
+    .container {
+        max-width: 100%; /* Allow full width on small screens */
+        width: 90%; /* Responsive width */
+    }
+    .container {
+        margin-top: 20px; /* Add space between text and form */
+    }
+}
+
+/* Large screens (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    main {
+        flex-direction: row-reverse; /* Reversed layout for larger screens */
+    }
+    .overlay {
+        width: 27%;
+    }
+    .overlay-content a, .close-icon {
+        font-size: 30px;
+    }
+    .nav-title {
+        font-size: 3vw;
+    }
+    .slideshow-section img {
+    max-width: 100%; /* Increase the image size for large screens */
+}
+}
+
+
+@media screen and (min-width: 769px) {
+    .contact-main {
+        flex-direction: row; /* Side-by-side layout */
+        justify-content: space-between; /* iframe to the left, text to the right */
+        align-items: center;
+    }
+
+    /* Position iframe on the left */
+    .contact-main iframe {
+        width: 600px;
+        height: 400px;
+    }
+
+    /* Position text content on the right */
+    .contact-main .text-content {
+        max-width: 400px;
+        text-align: left; /* Align text to the left if needed */
+    }
+}
+
+/* Extra large screens (above 1024px) */
+@media screen and (min-width: 1025px) {
+    .index-text {
+        max-width: 40%;
+        margin-left: 40px;
+    }
+    .overlay {
+        width: 27%;
+    }
+    .overlay-content a, .close-icon {
+        font-size: 30px;
+    }
+    .nav-title {
+        font-size: 3vw;
+    }
+}

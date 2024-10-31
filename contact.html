@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotary Wisdom - Contact</title>
+    <link rel="stylesheet" type="text/css" href="rotary.css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+    <!--Navigation bar-->
+  <nav>
+    <div class="sandwich-icon-area" onclick="openNav()">
+        <p>&#9776;</p> <!-- Sandwich icon -->
+    </div>
+    <div class="nav-title">
+        <p>Rotary Wisdom</p> <!-- Nav title -->
+    </div>
+  </nav>
+
+    <!--The curtain dropdown menu-->
+    <div id="myNav" class="overlay">
+        <p class="close-icon" onclick="closeNav()"> &times; </p>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="roles.html">Helicopter Roles</a>
+            <a href="latestNews.html">Latest News</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+        //Write the closeNav() method here
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
+
+    <!--main area-->
+<main class="contact-main">
+    <div class="text-content">
+        <h1>Get in touch</h1>
+        <p>Feel free to leave any feedback or inquiries about the website.</p>
+    </div>
+    <div class="container">
+        <form action="action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+			
+			<label for="email">Email</label>
+            <input type="text" id="email" name="Email" placeholder="Enter your email address..">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+				<option value="newzealand">New Zealand</option>
+				<option value="russia">Russia</option>
+				<option value="ukraine">Ukraine</option>
+				<option value="china">China</option>
+				<option value="france">France</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Please leave some feedback..." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</main>
+    </main>
+
+    <!--Footer Area-->
+    <footer>
+        <p>©2024 Rotary Wisdom</p>
+    </footer>
+</body>
+</html>

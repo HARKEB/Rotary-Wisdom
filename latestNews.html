@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotary Wisdom - Latest News</title>
+    <link rel="stylesheet" type="text/css" href="rotary.css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+    <!--Navigation bar-->
+  <nav>
+    <div class="sandwich-icon-area" onclick="openNav()">
+        <p>&#9776;</p> <!-- Sandwich icon -->
+    </div>
+    <div class="nav-title">
+        <p>Rotary Wisdom</p> <!-- Nav title -->
+    </div>
+  </nav>
+
+    <!--The curtain dropdown menu-->
+    <div id="myNav" class="overlay">
+        <p class="close-icon" onclick="closeNav()"> &times; </p>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="roles.html">Helicopter Roles</a>
+            <a href="latestNews.html">Latest News</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+        //Write the closeNav() method here
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
+
+    <!--main area-->
+    <main>
+      <div class="text-content">
+        <h1>Latest News</h1>
+        <p>Feel free to read about all of the latest and most significant recent news about any helicopters</p>
+      </div>
+    <div class="scrollable-container">
+      <div class="image-text-pair">
+          <img src="./images/mi8_on_fire.png" alt="Military helicopter in Omsk">
+          <h1>Teenagers set fire to Russian military helicopter in Omsk</h1>
+          <p>On September 21, two teenagers in Omsk, Russia, set fire to a Mi-8 helicopter at an airbase using a Molotov cocktail, as reported by the Telegram channel Baza. The 16-year-olds were detained and claimed they were offered $20,000 via Telegram for the attack. The helicopter sustained significant damage.
+             This incident follows a similar attack on September 11, when two younger boys ignited a Mi-8 helicopter at Noyabrsk airport in the Tyumen region. Additionally, various sabotage incidents, including train derailments, have occurred throughout Russia. In January, Ukraine's military intelligence agency (HUR) reported that some railway tracks were targeted by "unknown opponents of Putin's regime."</p>
+          <a href="https://kyivindependent.com/teenagers-set-fire-to-russian-military-helicopter-in-omsk/">Click here to read more in-depth about this article</a>
+    </div>
+      <div class="image-text-pair">
+          <img src="./images/heli_missing.png" alt="Missing Helictoper">
+          <h1>Helicopter goes missing in far eastern Russia with 22 people on board</h1>
+          <p>A helicopter carrying 22 people, mostly tourists, has gone missing in Russia’s Kamchatka peninsula. Authorities reported losing contact with the Mi-8 helicopter at 04:15 GMT. It had 19 passengers and three crew members on board, according to Governor Vladimir Solodov in a Telegram video posted on Saturday.</p>
+          <a href="https://www.aljazeera.com/news/2024/8/31/helicopter-goes-missing-in-far-eastern-russia-with-22-people-on-board">Click here to read more in-depth about this article</a>
+      </div>
+    </div>
+
+    </main>
+
+    <!--Footer Area-->
+    <footer>
+        <p>©2024 Rotary Wisdom</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotary Wisdom - Roles</title>
+    <link rel="stylesheet" type="text/css" href="rotary.css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+    <!--Navigation bar-->
+  <nav>
+    <div class="sandwich-icon-area" onclick="openNav()">
+        <p>&#9776;</p> <!-- Sandwich icon -->
+    </div>
+    <div class="nav-title">
+        <p>Rotary Wisdom</p> <!-- Nav title -->
+    </div>
+  </nav>
+
+    <!--The curtain dropdown menu-->
+    <div id="myNav" class="overlay">
+        <p class="close-icon" onclick="closeNav()"> &times; </p>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="roles.html">Helicopter Roles</a>
+            <a href="latestNews.html">Latest News</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+        //Write the closeNav() method here
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
+
+    <!--main area-->
+    <main>
+      <div class="box-container">
+        <div class="box">
+            <h2>Civillian roles</h2>
+            <img src="./images/mi34_1.png" alt="Image 1">
+            <p class="description">Civillian helictopers play a crucial part in sectors like transportation, emergency services, and agriculture.</p>
+            <a href="civilian.html" class="button">Discover More</a>
+        </div>
+        <div class="box">
+           <h2>Military roles</h2>
+            <img src="./images/ka52_2.png" alt="Image 2">
+            <p class="description">Russian military helicopters play essential roles in modern warfare, encompassing reconnaissance, logisitcs, troop transport, and close air support. </p>
+            <a href="military.html" class="button">Discover More</a>
+        </div>
+        <div class="box">
+            <h2>Special use roles</h2>
+            <img src="./images/ka_27_1.png" alt="Image 3">
+            <p class="description">Specialised helicopters are used for electronic warfare, reconnaissance, and carrier operations at sea.</p>
+            <a href="special.html" class="button">Discover More</a>
+        </div>
+      </div>
+    </main>
+
+    <!--Footer Area-->
+    <footer>
+        <p>©2024 Rotary Wisdom</p>
+    </footer>
+</body>
+</html>
